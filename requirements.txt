@@ -1,0 +1,6 @@
+# JayPeg core dependencies
+argparse==1.2.2
+logging==0.5.1.2
+redis==2.10.5
+importlib==1.0.4
+watchdog==0.8.3

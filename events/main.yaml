@@ -1,0 +1,29 @@
+# This is an examile file for a JayPeg config file
+# For this to work from within python code, adjustment is needed...REMOVE this?
+main:
+ name: JayPeg
+ reload: false   # Possible to monitor files and reload, like Flask and Django
+ port: 8080
+components:
+ audio: jasper
+ vision: opencv
+devices:
+ eye: /dev/video0
+ eye: /dev/video1
+ special: 
+  address: /dev/usb1
+  name: arm-left
+  module: usbarm
+  description: |
+   This is the controller for left arm.
+ arduino: /dev/usbACM0
+ arduino: /dev/usbACM1
+ special: 
+  address: http://1.2.3.4/control.aspx
+  name: pan/tilt camera
+  module: ipcam
+events:
+ example:
+  name: example1      # for human feedback, similar names will stop the system.
+  file: example.yaml  # if no directory is give, default event path is used
+  forced: false       # will fail if is True and no file present.
